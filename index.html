@@ -2,35 +2,119 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Text Formatting Tags in HTML</title>
+
+    <!-- Prism.js -->
+    <link href="vendors/css/prism-one-dark.css" rel="stylesheet" />
+    <link href="vendors/css/prism-line-numbers.css" rel="stylesheet" />
+    <script src="vendors/js/prism.min.js"></script>
+    <script src="vendors/js/prism-markup.min.js"></script>
+    <script src="vendors/js/prism-line-numbers.min.js"></script>
+
+    <!-- Clipboard.js -->
+    <script src="vendors/js/clipboard.min.js"></script>
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <!-- Only inline-level tags are allowed inside <p>. -->
-    <p>
+    <div class="wrap">
+        <div class="code-demo-container">
+            <!-- Code Panel -->
+            <section class="panel code-panel" aria-label="Code panel">
+                <div class="title-bar" role="banner">
+                    <div class="dots" aria-hidden="true">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+
+                    <div class="file-info" title="table.html">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            alt="HTML icon">
+                        <strong>Text_Formatting_tag.html</strong>
+                    </div>
+
+                    <!-- ✅ Premium Copy Button with Fixed Animation -->
+                    <button class="copy-btn" data-clipboard-target="#myCode">
+                        <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Copy</span>
+                    </button>
+                </div>
+
+                <pre class="code-block line-numbers"><code id="myCode" class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Text Formatting Tags in HTML&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;!-- Only inline-level tags are allowed inside &lt;p&gt;. --&gt;
+    &lt;p&gt;
         HTML allows text formatting such as
-        <b>bold</b>,
-        <i>italic</i>,
-        <u>underline</u>,
-        <em>emphasized</em>,
-        <s>strikethrough</s>,
-        <mark>mark text</mark>,
-        <small>small text</small>,
-        <sub>subscript text</sub>,
-        <sup>superscript text</sup>,
-        <strong>bold emphasis</strong>,
-        <strike>strikethrough</strike>, 
-        <font size="6" color="red" face="AnmolLipi">Amn</font>,
-    </p>
+        &lt;b&gt;bold&lt;/b&gt;,
+        &lt;i&gt;italic&lt;/i&gt;,
+        &lt;u&gt;underline&lt;/u&gt;,
+        &lt;em&gt;emphasized&lt;/em&gt;,
+        &lt;s&gt;strikethrough&lt;/s&gt;,
+        &lt;mark&gt;mark text&lt;/mark&gt;,
+        &lt;small&gt;small text&lt;/small&gt;,
+        &lt;sub&gt;subscript text&lt;/sub&gt;,
+        &lt;sup&gt;superscript text&lt;/sup&gt;,
+        &lt;strong&gt;bold emphasis&lt;/strong&gt;,
+        &lt;strike&gt;strikethrough&lt;/strike&gt;, 
+        &lt;font size="6" color="red" face="AnmolLipi"&gt;Amn&lt;/font&gt;,
+    &lt;/p&gt;
 
-    <!-- <center> and <marquee> are block-level and deprecated tags; it cannot be inside <p>. -->
-    <center>This text will be centered.</center>
-    <marquee>Scrolling Text</marquee>
+    &lt;!-- &lt;center&gt; and &lt;marquee&gt; are block-level and deprecated tags; it cannot be inside &lt;p&gt;. --&gt;
+    &lt;center&gt;This text will be centered.&lt;/center&gt;
+    &lt;marquee&gt;Scrolling Text&lt;/marquee&gt;
 
-    <!-- All Block-level ELements (Cannot be inside <p>):
-    <address>, <article>, <aside>, <blockquote>, <canvas>, <dd>, <div>, <dl>, <dt>, <fieldset>, <figcaption>, <figure>, <footer>, <form>, <h1>–<h6>, <header>, <hr>, <li>, <main>, <nav> <noscript>, <ol>, <p>, <pre>, <section>, <table>, <ul>, <video>, <center>, <marquee> -->
+    &lt;!-- All Block-level Elements (Cannot be inside &lt;p&gt;):
+    &lt;address&gt;, &lt;article&gt;, &lt;aside&gt;, &lt;blockquote&gt;, &lt;canvas&gt;, &lt;dd&gt;, &lt;div&gt;, &lt;dl&gt;, &lt;dt&gt;, &lt;fieldset&gt;, &lt;figcaption&gt;, &lt;figure&gt;, &lt;footer&gt;, &lt;form&gt;, &lt;h1&gt;–&lt;h6&gt;, &lt;header&gt;, &lt;hr&gt;, &lt;li&gt;, &lt;main&gt;, &lt;nav&gt;, &lt;noscript&gt;, &lt;ol&gt;, &lt;p&gt;, &lt;pre&gt;, &lt;section&gt;, &lt;table&gt;, &lt;ul&gt;, &lt;video&gt;, &lt;center&gt;, &lt;marquee&gt; --&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+            </section>
+
+            <!-- Demo Panel -->
+            <section class="panel demo-panel" aria-label="Demo panel">
+                <div class="title-bar" role="banner">
+                    <div class="dots" aria-hidden="true">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+
+                    <div class="file-info">
+                        <img src="assets/img/html5-original.svg" alt="HTML icon">
+                        <strong>Text_Formatting_tag.html (Preview)</strong>
+                    </div>
+                </div>
+
+                <div class="demo-body">
+                    <iframe id="demoIframe" src="preview/Text_Formatting_tag.html" title="Live preview"></iframe>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Main Script -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
